@@ -16,7 +16,7 @@ import javax.swing.WindowConstants;
 import javax.xml.stream.XMLStreamException;
 
 /**
- * 基盤地図情報（縮尺レベル25000）の行政区画の境界線及び代表点データを読み込んでみます。
+ * 基盤地図情報（縮尺レベル2500、25000）の行政区画の境界線及び代表点データを読み込んでみます。
  * FG-GML-28-05-Z001.zip
  * FG-GML-28102-ALL-Z001.zip
  */

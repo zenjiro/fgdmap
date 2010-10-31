@@ -98,8 +98,8 @@ public class LoadMapUtilities {
 		final ZipFile zipFile = new ZipFile(file);
 		for (final Enumeration<? extends ZipEntry> enumeration = zipFile.entries(); enumeration.hasMoreElements();) {
 			final ZipEntry entry = enumeration.nextElement();
-			//			if (entry.getName().matches("^FG-GML-[0-9]+-(AdmArea|BldA)(25000)?-[0-9]+-[0-9]+\\.xml$")) {
-			if (entry.getName().matches("^FG-GML-[0-9]+-AdmArea(25000)?-[0-9]+-[0-9]+\\.xml$")) {
+			if (entry.getName().matches("^FG-GML-[0-9]+-(AdmArea|BldA)(25000)?-[0-9]+-[0-9]+\\.xml$")) {
+				// if (entry.getName().matches("^FG-GML-[0-9]+-AdmArea(25000)?-[0-9]+-[0-9]+\\.xml$")) {
 				final XMLInputFactory factory = XMLInputFactory.newInstance();
 				final XMLEventReader reader = factory.createXMLEventReader(new InputStreamReader(zipFile
 						.getInputStream(entry), "SJIS"));
@@ -152,7 +152,7 @@ public class LoadMapUtilities {
 						}
 					} else if (event.isEndElement()) {
 						final EndElement element = event.asEndElement();
-						if (element.getName().getLocalPart().matches("AdmArea")) {
+						if (element.getName().getLocalPart().matches("AdmArea|area")) {
 							if (id != null && area != null && label != null) {
 								areas.put(id, new AreaData(area, label));
 								id = null;
