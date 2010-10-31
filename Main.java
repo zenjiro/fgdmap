@@ -28,7 +28,7 @@ public class Main {
 	 * @throws IOException IO例外
 	 */
 	public static void main(final String[] args) throws XMLStreamException, IOException {
-		final Map<String, AreaData> areas = LoadMapUtilities.loadAreas(new File("FG-GML-28-05-Z001.zip"));
+		final Map<String, AreaData> areas = LoadMapUtilities.loadAreas(new File("FG-GML-28102-ALL-Z001.zip"));
 		final Rectangle2D bounds = Utilities.getAreaBounds(areas.values());
 		final JFrame frame = new JFrame("FGDMap 0.1.0");
 		JFrame.setDefaultLookAndFeelDecorated(true);
